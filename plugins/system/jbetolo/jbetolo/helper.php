@@ -166,7 +166,7 @@ class jbetoloHelper {
          */
         public static function pingUrls($deep = false) {
                 $db = JFactory::getDBO();
-                $query = 'SELECT '.$db->nameQuote('id').', link, '.$db->nameQuote('type').' FROM #__menu WHERE published = 1';
+                $query = 'SELECT '.$db->quoteName('id').', link, '.$db->quoteName('type').' FROM #__menu WHERE published = 1';
 
                 $db->setQuery($query);
 
